@@ -3,7 +3,7 @@ namespace Vidly.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class AddValuesInMovies : DbMigration
+    public partial class AddValuesIns : DbMigration
     {
         public override void Up()
         {
@@ -16,24 +16,24 @@ namespace Vidly.Migrations
                     })
                 .PrimaryKey(t => t.Id);
             
-            AddColumn("dbo.Movies", "GenreId", c => c.Byte(nullable: false));
-            AddColumn("dbo.Movies", "DateAdded", c => c.DateTime(nullable: false));
-            AddColumn("dbo.Movies", "ReleaseDate", c => c.DateTime(nullable: false));
-            AddColumn("dbo.Movies", "NumberInStock", c => c.Byte(nullable: false));
-            AlterColumn("dbo.Movies", "Name", c => c.String(nullable: false, maxLength: 255));
-            CreateIndex("dbo.Movies", "GenreId");
-            AddForeignKey("dbo.Movies", "GenreId", "dbo.Genres", "Id", cascadeDelete: true);
+            AddColumn("dbo.s", "GenreId", c => c.Byte(nullable: false));
+            AddColumn("dbo.s", "DateAdded", c => c.DateTime(nullable: false));
+            AddColumn("dbo.s", "ReleaseDate", c => c.DateTime(nullable: false));
+            AddColumn("dbo.s", "NumberInStock", c => c.Byte(nullable: false));
+            AlterColumn("dbo.s", "Name", c => c.String(nullable: false, maxLength: 255));
+            CreateIndex("dbo.s", "GenreId");
+            AddForeignKey("dbo.s", "GenreId", "dbo.Genres", "Id", cascadeDelete: true);
         }
         
         public override void Down()
         {
-            DropForeignKey("dbo.Movies", "GenreId", "dbo.Genres");
-            DropIndex("dbo.Movies", new[] { "GenreId" });
-            AlterColumn("dbo.Movies", "Name", c => c.String());
-            DropColumn("dbo.Movies", "NumberInStock");
-            DropColumn("dbo.Movies", "ReleaseDate");
-            DropColumn("dbo.Movies", "DateAdded");
-            DropColumn("dbo.Movies", "GenreId");
+            DropForeignKey("dbo.s", "GenreId", "dbo.Genres");
+            DropIndex("dbo.s", new[] { "GenreId" });
+            AlterColumn("dbo.s", "Name", c => c.String());
+            DropColumn("dbo.s", "NumberInStock");
+            DropColumn("dbo.s", "ReleaseDate");
+            DropColumn("dbo.s", "DateAdded");
+            DropColumn("dbo.s", "GenreId");
             DropTable("dbo.Genres");
         }
     }
