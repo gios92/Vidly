@@ -25,6 +25,8 @@ namespace Vidly.Controllers
         }
 
 
+        // Commento della Action Index 
+
         // GET: Movie
         public ActionResult Index()
         {
