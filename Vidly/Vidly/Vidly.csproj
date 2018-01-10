@@ -212,6 +212,7 @@
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MovieController.cs" />
     <Compile Include="Dtos\CustomerDto.cs" />
+    <Compile Include="Dtos\GenreDto.cs" />
     <Compile Include="Dtos\MembershipTypeDto.cs" />
     <Compile Include="Dtos\MovieDto.cs" />
     <Compile Include="Global.asax.cs">
@@ -474,6 +475,7 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="Views\Movie\Details.cshtml" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -512,7 +514,6 @@
     <Content Include="Views\Customer\Index.cshtml" />
     <Content Include="Views\Movie\Index.cshtml" />
     <Content Include="Views\Customer\Details.cshtml" />
-    <Content Include="Views\Movie\Details.cshtml" />
     <Content Include="Views\Customer\CustomerForm.cshtml" />
     <Content Include="Views\Movie\MovieForm.cshtml" />
   </ItemGroup>
