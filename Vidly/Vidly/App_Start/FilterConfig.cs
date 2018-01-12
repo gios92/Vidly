@@ -11,6 +11,8 @@ namespace Vidly
             //Autenticazione globale dell'applicazione (passaggio veramente restrittivo).
             filters.Add(new AuthorizeAttribute());
 
+            filters.Add(new RequireHttpsAttribute());
+
         }
     }
 }
